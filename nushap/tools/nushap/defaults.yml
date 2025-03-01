@@ -1,0 +1,32 @@
+
+#------------------------------------------------------------------------------
+# Configuration file for the nushap tool.
+# Assumptions:
+# A. Datasets: class is last column; sample ID is optional, and it is the
+#              first column when used
+# B. Ordinal features: tolerances not used for now
+#------------------------------------------------------------------------------
+
+# Default running options
+verbosity: 5
+debug: false
+
+# Tool-specific options
+precompute_cxps: true     # Use set of CXps for testing WAXp
+error: 0.005              # Value of error in Sv estimation
+alpha: 0.005              # Value of alpha in Sv estimation
+contrib_mode: 'ref'       # Use reference mode for computing contribs: ref/def
+
+# Dataset parsing options
+drop_na_cols: true        # delete columns with missing values
+target: null              # target column
+excludes: []              # columns to exclude
+colid: false              # exclude first column
+logfile: 'Logs/logfile'   # default logfile
+hasheader: true
+separator: ','
+
+# Whether to randomize at the start
+randomize: false
+true_rand: false
+seed: 0
